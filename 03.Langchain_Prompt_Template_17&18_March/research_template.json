@@ -1,0 +1,17 @@
+{
+    "name": null,
+    "input_variables": [
+        "length",
+        "paper_title",
+        "style"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\nSummarise the research paper titled {paper_title}\nwith the following requirements:\n  - Explanation style  : {style}\n  - Summary length     : {length}\n\nGuidelines to follow:\n  1. Include relevant mathematical equations if present\n  2. Explain concepts using simple, intuitive code snippets\n  3. Add relatable analogies to simplify complex ideas\n  4. If information unavailable, state 'Insufficient info'\n  5. Keep summary clear, accurate, and aligned with the\n     requested style and length\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
