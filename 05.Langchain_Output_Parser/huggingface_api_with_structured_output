@@ -1,15 +1,20 @@
 from dotenv import load_dotenv
 load_dotenv()
-
+from typing import TypedDict
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
-llm_obj=HuggingFaceEndpoint(repo_id="bhavyagoyal-lexsi/harper-valley-qwen-sft-ckpt-200",
+llm_obj=HuggingFaceEndpoint(repo_id="Qwen/Qwen2.5-7B-Instruct",
                         task="text_generation" , 
                         )
 
 llm1=ChatHuggingFace(llm=llm_obj,)
 
+class FeedbackClass(TypedDict):
+    result:str
+
+
+structured_model=llm1.with_structured_output(FeedbackClass)
 query="what is the capital of china?"
-result=llm1.invoke(query)
+result=structured_model.invoke(query)
 
 print(result)
