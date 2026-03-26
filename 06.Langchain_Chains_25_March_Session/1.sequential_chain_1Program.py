@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 prompt=PromptTemplate(
-    template="Give me 3 interesting facts about the {topic}"
+    template="Give me detailed report on {topic}"
 )
 
 llm=ChatOpenAI(model="gpt-4o")
