@@ -9,9 +9,9 @@ print("api key loaded sucessfully",api_key[0:20])
 from langchain_openai import ChatOpenAI
 
 llm=ChatOpenAI(model="gpt-4o-mini", 
-               temperature=)
+               temperature=0.1)
 
-result=llm.invoke("what is capital of france")
+result=llm.invoke("provide me information about iran-us war of 2026")
 
 print(result)
 
